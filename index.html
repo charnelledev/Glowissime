@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beauté Divine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Beauté Divine</h1>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#reservation">Réservation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="accueil" class="hero">
+    <h2>Révélez votre beauté naturelle</h2>
+    <p>Soins du visage, maquillage, manucure et bien plus encore...</p>
+  </section>
+
+  <section id="services">
+    <h2>Nos Services</h2>
+    <ul>
+      <li>💆 Soins du visage</li>
+      <li>💅 Manucure & Pédicure</li>
+      <li>💄 Maquillage professionnel</li>
+    </ul>
+  </section>
+
+  <section id="galerie">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="Soins visage" />
+      <img src="images/photo2.jpg" alt="Maquillage" />
+      <img src="images/photo3.jpg" alt="Manucure" />
+    </div>
+  </section>
+
+  <section id="reservation">
+    <h2>Réservez une séance</h2>
+    <form id="booking-form">
+      <input type="text" placeholder="Votre nom" required />
+      <input type="email" placeholder="Votre email" required />
+      <input type="date" required />
+      <select required>
+        <option value="">Choisir un service</option>
+        <option>Soins du visage</option>
+        <option>Manucure</option>
+        <option>Maquillage</option>
+      </select>
+      <button type="submit">Réserver</button>
+    </form>
+    <p id="confirmation-message" class="hidden">Merci ! Votre réservation a été enregistrée.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Nous contacter</h2>
+    <form>
+      <input type="text" placeholder="Votre nom" required />
+      <input type="email" placeholder="Votre email" required />
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <h3>Notre salon</h3>
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.998822295749!2d2.292292615674044!3d48.858844079287485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc700000001%3A0x2c2ee07a2cfb5f1a!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1680000000000"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Beauté Divine - Tous droits réservés</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
