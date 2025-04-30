@@ -9,7 +9,209 @@
     background: #fff8f4;
     color: #333;
     line-height: 1.6;
+    padding-top: 120px; /* adapte selon la hauteur de ton header */
   }
+  .navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ff9aa2;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* NAVBAR FIXE */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ff9aa2;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    padding-top: 100px;
+  }
+  
+  /* CONTAINER NAVBAR */
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* LOGO */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo img {
+    height: 40px;
+    width: 40px;
+  }
+  .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #702963;
+  }
+  
+  /* MENU */
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #702963;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffffff;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* MENU BURGER : CACHÉ SUR GRAND ÉCRAN */
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #702963;
+  }
+  
+  
+  
+  /* ESPACE POUR COMPENSER LA NAVBAR FIXE */
+  body {
+      padding-top: 100px;
+    }
+    
+    /* CONTAINER DE LA NAVBAR */
+    .navbar-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* LOGO À GAUCHE */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 40px;
+        width: 40px;
+        object-fit: contain;
+    }
+    
+    .logo span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #702963;
+    }
+    
+    /* MENU À DROITE */
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+    
+    nav a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #702963;
+        position: relative;
+        padding: 5px;
+        transition: color 0.3s ease;
+    }
+    /* VERSION MOBILE */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+    
+      nav {
+        display: none;
+        width: 100%;
+      }
+    
+      nav.active {
+        display: block;
+      }
+    
+      nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+        gap: 10px;
+        background-color: #ff9aa2;
+      }
+    
+      nav ul li {
+        text-align: center;
+      }
+    }
+    
+  
+  /* SURVOL : SOULIGNÉ + COULEUR */
+  nav a:hover {
+    color: #ffffff;
+  }
+  
+  nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+  
+  
   
   header {
     background-color: #ff9aa2;
