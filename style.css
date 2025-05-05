@@ -11,13 +11,10 @@ body {
   line-height: 1.6;
   padding-top: 120px; /* adapte selon la hauteur de ton header */
 }
-body {
-  padding-top: 100px;
-} 
 
 /* CONTAINER DE LA NAVBAR */
- .navbar-container {
-    max-width: 1200px;
+ .navbar-fixed {
+    max-width: 1300px;
     margin: 0 auto;
     padding: 15px 20px;
     display: flex;
@@ -45,11 +42,7 @@ body {
 } 
 
 /* MENU */
- nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
+
 nav a {
   text-decoration: none;
   font-weight: bold;
@@ -117,16 +110,18 @@ nav a::after {
   height: 2px;
   width: 0%;
   background-color: #ffffff;
-  transition: width 0.3s ease;
+  transition: color 0.9s ease, transform 0.9s ease;
+  
 }
 
 nav a:hover::after {
   width: 100%;
+  transform: scale(1.05);
 } 
 
 /* RESPONSIVE */
  @media (max-width: 768px) {
-  .navbar-container {
+  .navbar-fixed {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -226,17 +221,19 @@ ul {
 /* 🔹 2. Déplacement (léger mouvement) */
 /* .image-hover-move {
   transition: transform 0.3s ease;
-/* } */
+} */
 /* .image-hover-move:hover {
   transform: translateY(-5px);
 } */
+
 /* 3. Rotation légère */
+
 /* .image-hover-rotate {
   transition: transform 0.3s ease;
 }
 .image-hover-rotate:hover {
   transform: rotate(3deg);
-} */ */
+} */
 
 /* 🔹 4. Combinaison (zoom + déplacement) */
 
@@ -246,21 +243,27 @@ ul {
 .image-hover-combo:hover {
   transform: scale(1.05) translateY(-5px);
 } */
+
 /* 🔄 Rotation complète à 360° au hover */
+
 /* .image-hover-rotate360 {
   transition: transform 0.6s ease;
 }
 .image-hover-rotate360:hover {
   transform: rotate(360deg);
 } */
+
 /* 🎯 Rotation légère (ex: 5 degrés) */
+
 /* .image-hover-tilt {
   transition: transform 0.3s ease;
 }
 .image-hover-tilt:hover {
   transform: rotate(5deg);
 } */
+
 /* ➕ Variante plus fluide (avec zoom en plus, optionnel) : */
+
 /* .image-hover-tilt-zoom {
   transition: transform 0.3s ease;
 }
@@ -270,6 +273,7 @@ ul {
 
 
 /* 5. Ombre portée (ajout d'ombre) */
+
 /* .image-hover-shadow {
   transition: box-shadow 0.3s ease;
 }
@@ -277,6 +281,7 @@ ul {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 } */
 /* 6. Flou (ajout d'un flou) */
+
 /* .image-hover-blur {
   transition: filter 0.3s ease;
 }
@@ -287,19 +292,17 @@ ul {
   transition: transform 0.3s ease;
 }
 .image-hover-show:hover {
-  transform: rotate(10deg); /* Ajuste l'angle si nécessaire */
-/* } */
-
-
-#reservation form{
-  max-width: 900px;
+  transform: rotate(10deg);
+   
+} */
+ form{
+  max-width: 400px;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: red;
-
-
+  background-color: #ffe6eb;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -320,7 +323,8 @@ button {
 }
 
 button:hover {
-  background: #f78ca0;
+    transform: scale(1.03);
+     background: #f78ca0;
 }
 
 footer {
@@ -388,13 +392,6 @@ footer {
   gap: 20px;
   justify-content: center;
 }
-.testimonials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
 .testimonial {
   background: #ffe6eb;
   padding: 20px;
