@@ -345,7 +345,7 @@
   }
 
   .whatsapp-float {
-    position: fixed;
+    position:fixed;
     bottom: 20px;
     right: 20px;
     height: 60px;
@@ -416,4 +416,65 @@
   
   
   
-  
+  #target {
+    display: flex;
+    margin-left: 1rem;
+    position: relative;
+    /* color:; */
+    /* margin-top: -2px; */
+    }
+    
+    #target::after {
+    content: "";
+    position: absolute;
+    height: 3.5rem;
+    width: 5px;
+    background-color: black;
+    top: 0;
+    transform: translateY(-4px);
+    right: -5px;
+    animation: animate 0.8s linear infinite;
+    }
+    
+    @keyframes animate {
+    50% {
+    opacity: 0.1;
+    }
+    100% {
+     opacity: 1;
+    }
+    }
+
+    #slogan-display {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    
+    .slogan-visible {
+      opacity: 1;
+    }
+    .glow-letter {
+      display: inline-block;
+      text-shadow: 0 0 8px rgba(200, 162, 200, 0.5),
+                   0 0 15px rgba(255, 174, 201, 0.4);
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      animation: glowZoom 2.5s ease forwards;
+      transform-origin: center;
+    }
+    
+    @keyframes glowZoom {
+      0% {
+        opacity: 0;
+        transform: scale(1.6);
+      }
+      20% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1);
+      }
+    }
+        
