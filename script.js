@@ -55,3 +55,16 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
   loop();
 
 
+  document.getElementById('coiffureFilter').addEventListener('change', function() {
+    let filterValue = this.value;
+    let allCoiffures = document.querySelectorAll('.coiffureCategory');
+    
+    allCoiffures.forEach(function(coiffure) {
+      if (filterValue === 'all' || coiffure.classList.contains(filterValue)) {
+        coiffure.style.display = 'block';
+      } else {
+        coiffure.style.display = 'none';
+      }
+    });
+  });
+

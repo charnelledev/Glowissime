@@ -14,7 +14,7 @@ body {
 
 /* CONTAINER DE LA NAVBAR */
  .navbar-fixed {
-    max-width: 1300px;
+    /* max-width: 1300px; */
     margin: 0 auto;
     padding: 15px 20px;
     display: flex;
@@ -173,8 +173,37 @@ nav a:hover::after {
   
 }
 
+.section {
+  padding: 50px 20px;
+  background: #fff0f5;
+  text-align: center;
+}
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.testimonial {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.testimonial img {
+  width: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+span{
+  color: gold;
+  font-size: 1.2rem;
+}
+
+
 .hero {
-  background: #b86874;
+  background-color: #fecdd3;
   padding: 50px 20px;
   text-align: center;
   color: #702963;
@@ -504,3 +533,24 @@ footer {
       transform: scale(1);
     }
   }
+
+  main img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: calc(var(--i) * 0.2s);
+  }
+  
+  main img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
