@@ -243,12 +243,16 @@ span{
 }
 
 
+.hero p {
+ font-size: 1.5rem;
+}
+
 .hero {
   background-color: #fecdd3;
   padding: 50px 20px;
   text-align: center;
   color: #702963;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 section {
@@ -330,21 +334,21 @@ ul {
 
 /* 🔄 Rotation complète à 360° au hover */
 
-/* .image-hover-rotate360 {
+.image-hover-rotate360 {
   transition: transform 0.6s ease;
 }
 .image-hover-rotate360:hover {
   transform: rotate(360deg);
-} */
+}
 
 /* 🎯 Rotation légère (ex: 5 degrés) */
 
-/* .image-hover-tilt {
+.image-hover-tilt {
   transition: transform 0.3s ease;
 }
 .image-hover-tilt:hover {
   transform: rotate(5deg);
-} */
+}
 
 /* ➕ Variante plus fluide (avec zoom en plus, optionnel) : */
 
@@ -411,39 +415,7 @@ ul {
   color: #333;
 }
 
-/* Formulaires */
-/* form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: #ffe6eb;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-} */
 
-/* Champs de formulaire */
-/* input, textarea, select {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-} */
-
-/* Style du bouton */
-/* button {
-  background: #ff9aa2;
-  color: #702963;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  transform: scale(1.03);
-  background: #f78ca0;
-} */
 
 .reservation-contact {
   display: flex;
@@ -628,16 +600,44 @@ footer {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-}
-.testimonial {
-  background: #ffe6eb;
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 300px;
-  text-align: center;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  animation: scrollCarousel 12s linear infinite;
 }
 
+
+.testimonial {
+  min-width: 250px;
+  max-width: 300px;
+  padding: 20px;
+  background: #ffe6eb;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+
+#temoignages {
+  background: #fff0f5;
+  padding: 50px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .client-photo {
   width: 60px;
   height: 60px;
@@ -662,6 +662,22 @@ footer {
   margin-top: 10px;
   font-weight: bold;
   color: #702963;
+}
+
+
+
+
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive: en colonne sur mobile */
+@media (max-width: 768px) {
+  .testimonial-carousel {
+    flex-direction: column;
+    animation: none;
+  }
 }
 
 
