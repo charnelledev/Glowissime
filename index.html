@@ -43,14 +43,22 @@
     <p>Soins du visage, maquillage, manucure et bien plus encore...</p>
   </section>
 
-  <section id="services">
-    <h2>Nos Services</h2>
+  <section id="services" class="nos-services">
+
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="video/b2cba8dc967f960561759efeeff6d11b.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
+   
+    <div class="content">
+    <h2 style="--i: 1">Nos Services</h2>
     <ul>
-      <li>💆 Soins du visage</li>
-      <li>💅 Manucure & Pédicure</li>
-      <li>💄 Maquillage professionnel</li>     
-      <li>💇 Coiffure (Rasta Américaine, Passe mèche, Chignon, Laine)</li>
+      <li style="--i: 2">💆 Soins du visage</li>
+      <li style="--i: 3">💅 Manucure & Pédicure</li>
+      <li style="--i: 4">💄 Maquillage professionnel</li>     
+      <li style="--i: 4">💇 Coiffure (Rasta Américaine, Passe mèche, Chignon, Laine)</li>
     </ul>
+  </div>
   </section>
 </div>
   <section id="galerie">
@@ -58,29 +66,29 @@
     <div class="gallery">
       
               
-              <img src="images/téléchargement (9).jpg" alt="Soins visage"   class="image-hover-zoom" />
-              <img src="images/image/Masque de boue purifiante.jpg" alt="Soins visage"   class="image-hover-zoom" />
+              <img src="images/téléchargement (9).jpg" alt="Soins visage"   class="image-hover-zoom image-hover-blur" />
+              <img src="images/image/Masque de boue purifiante.jpg" alt="Soins visage"   class="image-hover-zoom image-hover-blur" />
 
-              <img src="images/coiffure/téléchargement (46).jpg" class="image-hover-zoom" />
-              <img src="images/coiffure/téléchargement (32).jpg" class="image-hover-zoom">
+              <img src="images/coiffure/téléchargement (46).jpg" class="image-hover-zoom image-hover-blur" />
+              <img src="images/coiffure/téléchargement (32).jpg" class="image-hover-zoom image-hover-blur">
               
-              <img src="images/téléchargement (5).jpg" alt="Maquillage" class="image-hover-zoom" />
+              <img src="images/téléchargement (5).jpg" alt="Maquillage" class="image-hover-zoom image-hover-blur" />
              
-              <img src="images/téléchargement (11).jpg" alt="Maquillage" class="image-hover-zoom" />
+              <img src="images/téléchargement (11).jpg" alt="Maquillage" class="image-hover-zoom image-hover-rotate" />
              
-              <img src="images/coiffure/𝐏𝐫𝐞𝐭𝐭𝐲𝐋𝐢𝐭𝐭𝐥𝐞𝐁𝐱𝐫𝐛𝐢𝐞.jpg"class="image-hover-zoom">
+              <img src="images/coiffure/𝐏𝐫𝐞𝐭𝐭𝐲𝐋𝐢𝐭𝐭𝐥𝐞𝐁𝐱𝐫𝐛𝐢𝐞.jpg"class="image-hover-zoom image-hover-rotate">
 
               <img src="images/téléchargement (6).jpg" alt="Manucure" 
-              class="image-hover-zoom "/>
+              class="image-hover-zoom image-hover-rotate "/>
             
               <img src="images/image/téléchargement (30).jpg" alt="Manucure" 
-              class="image-hover-zoom"/>
+              class="image-hover-zoom image-hover-rotate "/>
 
-              <img src="images/coiffurel/téléchargement (53).jpg" class="image-hover-zoom"/>
+              <img src="images/coiffurel/téléchargement (53).jpg" class="image-hover-zoom image-hover-rotate"/>
               
 
-              <img src="images/téléchargement (41).jpg" class="image-hover-zoom"/>
-              <img src="images/téléchargement (42).jpg" class="image-hover-zoom"/>
+              <img src="images/téléchargement (41).jpg" class="image-hover-zoom image-hover-shadow "/>
+              <img src="images/téléchargement (42).jpg" class="image-hover-zoom image-hover-blur"/>
 
               
       </div>
@@ -88,7 +96,7 @@
     <button class="btn"><a href="galerie.html">voir plus</a></button>
   </section>
 
-  <section id="reservation">
+  <!-- <section id="reservation">
     <h2>Réservez une séance</h2>
     <form id="booking-form">
       <input type="text" placeholder="Votre nom" required />
@@ -112,8 +120,101 @@
       <input type="email" placeholder="Votre email" required />
       <textarea placeholder="Votre message" required></textarea>
       <button type="submit">Envoyer</button>
-    </form>
+    </form> -->
 
+    <section class="reservation-contact">
+      <!-- Patronne -->
+      <div class="info-form-block">
+        <div class="info-box">
+          <img src="profil/Girl Squad Media & Photo is ready to help take your brand to the next level_.jpg" alt="Reine Sira">
+          <div class="info-text">
+            <h3>Reine Sira</h3>
+            <p>"La beauté, un héritage qu'on sublime." </p>
+          </div>
+        </div>
+        <div class="form-box">
+          <h2>Réservez une séance</h2>
+          <form id="booking-form">
+            <input type="text" placeholder="Votre nom" required />
+            <input type="email" placeholder="Votre email" required />
+            <input type="date" required />
+            <select required>
+              <option value="">Choisir un service</option>
+              <option>Soins du visage</option>
+              <option>Manucure</option>
+              <option>Maquillage</option>
+            </select>
+            <button type="submit">Réserver</button>
+          </form>
+        </div>
+      </div>
+    
+      <!-- Équipe -->
+      <div class="info-form-block">
+        <div class="info-box">
+          <img src="profil/téléchargement (58).jpg" alt="Équipe beauté">
+          <div class="info-text">
+            <h3>Les Mains Magiques</h3>
+            <p>"Des mains expertes pour sublimer votre beauté."</p>
+          </div>
+        </div>
+        <div class="form-box">
+          <h2>Nous contacter</h2>
+          <form>
+            <input type="text" placeholder="Votre nom" required />
+            <input type="email" placeholder="Votre email" required />
+            <textarea placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- <section id="reservation">
+      <div class="reservation-container"> -->
+        <!-- Section Patronne -->
+        <!-- <div class="patronne">
+          <img src="profil/Girl Squad Media & Photo is ready to help take your brand to the next level_.jpg" alt="Photo de la patronne" class="image-patronne" />
+          <h3>Reine Sira</h3>
+          <p>"La beauté, un héritage qu'on sublime."</p>
+        </div> -->
+    
+        <!-- Formulaire de réservation -->
+        <!-- <form id="booking-form">
+          <input type="text" placeholder="Votre nom" required />
+          <input type="email" placeholder="Votre email" required />
+          <input type="date" required />
+          <select required>
+            <option value="">Choisir un service</option>
+            <option>Soins du visage</option>
+            <option>Manucure</option>
+            <option>Maquillage</option>
+          </select>
+          <button type="submit">Réserver</button>
+        </form>
+      </div>
+    </section>
+    
+    <section id="contact">
+      <div class="contact-container"> -->
+        <!-- Section Équipe -->
+        <!-- <div class="equipe">
+          <img src="profil/téléchargement (58).jpg" alt="Photo de l'équipe" class="image-equipe" />
+          <h3>Les Mains Magiques</h3>
+          <p>"Des mains expertes pour sublimer votre beauté."</p>
+        </div> -->
+    
+        <!-- Formulaire de contact -->
+        <!-- <form>
+          <input type="text" placeholder="Votre nom" required />
+          <input type="email" placeholder="Votre email" required />
+          <textarea placeholder="Votre message" required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section> -->
+    
    <!-- Témoignages -->
 <section id="temoignages" class="section">
     <h2>Avis de nos clientes</h2>
