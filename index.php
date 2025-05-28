@@ -1,3 +1,14 @@
+<?php
+session_start();
+require_once "database.php";
+$message = $_SESSION['message'] ?? '';
+$success = $_SESSION['success'] ?? false;
+// Nettoyage
+unset($_SESSION['message'], $_SESSION['success']);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -48,7 +59,7 @@
 
     <video autoplay muted loop playsinline class="bg-video">
       <source src="video/b2cba8dc967f960561759efeeff6d11b.mp4" type="video/mp4">
-      Votre navigateur ne supporte pas les vidéos HTML5.
+      <!-- Votre navigateur ne supporte pas les vidéos HTML5. -->
     </video>
    
     <div class="content">
@@ -100,27 +111,34 @@
     <!-- Patronne + Réservation -->
     <div class="row">
       <div class="image-box">
-        <img src="/profil/Girl Squad Media & Photo is ready to help take your brand to the next level_.jpg" class="image-hover-rotate" alt="Reine Sira" />
+        <img src="profil/Girl Squad Media & Photo is ready to help take your brand to the next level_.jpg" class="image-hover-rotate" alt="Reine Sira" />
         <div class="caption fade-in">
           <h3>Reine Sira</h3>
           <p>"La beauté, un héritage qu'on sublime.</p>
         </div>
       </div>
       <div class="form-container fade-in">
-        <h2>Réservez une séance</h2>
-        <form id="booking-form">
-          <input type="text" placeholder="Votre nom" required />
-          <input type="email" placeholder="Votre email" required />
-          <input type="date" required />
-          <select required>
-            <option value="">Choisir un service</option>
-            <option>Soins du visage</option>
-            <option>Manucure</option>
-            <option>Maquillage</option>
-            <option>coifure</option>
-          </select>
-          <button type="submit">Réserver</button>
-        </form>
+        
+     <?php if ($message): ?>
+  <div id="alert-message" class="transition-opacity duration-500 fixed top-5 left-1/2 transform -translate-x-1/2 z-50 p-4 rounded-lg shadow-lg text-white <?php echo $success ? 'bg-green-500' : 'bg-red-500'; ?>">
+    <?php echo $message; ?>
+  </div>
+<?php endif; ?>
+  <h2>reservation</h2>
+<form method="POST" action="reservation.php">
+  <input type="text" name="nom" placeholder="Votre nom" required />
+  <input type="email" name="email" placeholder="Votre email" required />
+  <input type="date" name="date" required />
+  <select name="service" required>
+    <option value="">Choisir un service</option>
+    <option>Soins du visage</option>
+    <option>Manucure</option>
+    <option>Maquillage</option>
+    <option>Coiffure</option>
+  </select>
+  <button type="submit">Réserver</button>
+</form>
+
       </div>
     </div>
   
@@ -135,10 +153,10 @@
       </div>
       <div class="form-container fade-in">
         <h2>Nous contacter</h2>
-        <form>
-          <input type="text" placeholder="Votre nom" required />
-          <input type="email" placeholder="Votre email" required />
-          <textarea placeholder="Votre message" required></textarea>
+        <form id="contact-form" action="contact.php" method="POST">
+          <input type="text" name="nom" placeholder="Votre nom" required />
+          <input type="email" name="email" placeholder="Votre email" required />
+          <textarea placeholder="Votre message" name="message"></textarea>
           <button type="submit">Envoyer</button>
         </form>
       </div>

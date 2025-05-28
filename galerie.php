@@ -22,10 +22,10 @@
   <nav id="navbar">
     <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html">Services</a></li>
+        <!-- <li><a href="index.html">Services</a></li>
          <li><a href="index.html">Témoignages</a></li>
         <li><a href="index.html">Réservation</a></li>
-        <li><a href="index.html">Contact</a></li>
+        <li><a href="index.html">Contact</a></li> -->
     </ul>
   </nav>
 </header>
